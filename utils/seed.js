@@ -9,7 +9,7 @@ connection.once('open', async () => {
     // Delete the collections if they exist
     let thoughtCheck = await connection.db.listCollections({ name: 'thoughts' }).toArray();
     if (thoughtCheck.length) {
-      await connection.dropCollection('thought');
+      await connection.dropCollection('thoughts');
     }
 
     let usersCheck = await connection.db.listCollections({ name: 'users' }).toArray();
